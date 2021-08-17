@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import com.example.mvvm_firebase.MainActivity
 import com.example.mvvm_firebase.R
 import com.example.mvvm_firebase.utils.replaceView
+import com.example.mvvm_firebase.utils.setupSnackbar
 import com.example.mvvm_firebase.viewmodel.SigninViewModel
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseUser

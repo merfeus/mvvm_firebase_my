@@ -10,9 +10,11 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mvvm_firebase.MainActivity
 import com.example.mvvm_firebase.R
 import com.example.mvvm_firebase.adapter.ContasAdapter
 import com.example.mvvm_firebase.model.Conta
+import com.example.mvvm_firebase.utils.replaceView
 import com.example.mvvm_firebase.viewmodel.ContentViewModel
 
 class ContentFragment : Fragment(R.layout.content_fragment) {
@@ -47,6 +49,9 @@ class ContentFragment : Fragment(R.layout.content_fragment) {
 
         viewModel.fetchContas()
 
+        view.findViewById<View>(R.id.backButton).setOnClickListener {
+            (requireActivity() as? MainActivity)?.replaceView(SignInFragment.newInstance())
+        }
 
     }
 
